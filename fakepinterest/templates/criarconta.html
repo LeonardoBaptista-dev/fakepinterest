@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block titulo  %}
+  FakePinterest - Cadastro
+{% endblock titulo  %}
+
+{% block body %}
+<h1>Página Cadastro</h1>
+
+    <form method="POST">
+    {{ form.csrf_token }}
+
+    {{ form.username.label() }}
+    {{ form.username() }}
+
+    {{ form.email.label() }}
+    {{ form.email() }}
+
+    {{ form.senha.label() }}
+    {{ form.senha() }}
+
+    {{ form.confirmar_senha.label() }}
+    {{ form.confirmar_senha() }}
+
+    {{ form.botao_confirmacao }}
+
+  
+{% endblock body %}

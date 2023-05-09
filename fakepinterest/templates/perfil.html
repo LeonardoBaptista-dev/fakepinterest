@@ -10,8 +10,12 @@ Perfil - {{ usuario }}
 
 <h1>perfil do Usuario: {{usuario}}</h1>
 
-        <p>Nome: {{usuario}}</p>
-        <p>Idade: {{idade}}</p>
+{% for foto in usuario.fotos %}
+
+<img src="" alt="">
+  
+{% endfor %}
+        
 
         <a href="{{ url_for('index') }}">Sair</a>
   
